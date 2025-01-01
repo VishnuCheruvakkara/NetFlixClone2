@@ -26,7 +26,7 @@ function Navbar() {
                 <FaRegBell className='icons' />
                 <div className="navbar-profile">
                     <img src={profile_icon} className="profile" alt="" />
-                    <IoMdArrowDropdown className="" />
+                    <IoMdArrowDropdown className="arrow" />
                     <div className="dropdown">Sighn out</div>
                 </div>
             </div>

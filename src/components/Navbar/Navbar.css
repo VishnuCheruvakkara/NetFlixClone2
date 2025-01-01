@@ -33,6 +33,7 @@
 .navbar-right .icons{
     width:25px;
     cursor:pointer;
+    font-size:22px;
 
 }
 .navbar-right .profile{
@@ -45,6 +46,9 @@
     gap:10px;
     cursor:pointer;
     position:relative;
+}
+.arrow{
+    font-size:25px
 }
 .navbar .dropdown{
     position:absolute;

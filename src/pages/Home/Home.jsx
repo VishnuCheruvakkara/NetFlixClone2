@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import HeroBanner from '../../assets/BannerImage.jpg'
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { FaPlay } from "react-icons/fa";
+import TitleCards from '../../components/TitleCards/TitleCards';
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
     return (
@@ -16,11 +18,18 @@ function Home() {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet obcaecati nisi eaque consequatur nobis autem ipsa, culpa doloribus esse</p>
                     <div className='hero-btns'>
                         <button className='btn'><FaPlay />Play</button>
-                        <button className='btn dark-btn'><IoMdInformationCircleOutline className='info'/>More Info</button>
-
+                        <button className='btn dark-btn'><IoMdInformationCircleOutline className='info' />More Info</button>
                     </div>
+                    <TitleCards />
                 </div>
             </div>
+            <div className="more-cards">
+                <TitleCards title={"Blockbuster Movies"} />
+                <TitleCards title={"Only on Netflix"} />
+                <TitleCards title={"Upcomming"} />
+                <TitleCards title={"Topics for you"} />
+            </div>
+            <Footer />
         </div>
     )
 }
