@@ -16,7 +16,7 @@ function Player() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYjE2MjMzYzRlNjdhMTMxMzk4YWVkZTlkZjQyMjhmYyIsIm5iZiI6MTczNTcxODMyNi43NzQwMDAyLCJzdWIiOiI2Nzc0ZjViNjk3YWE4ZTRlMmMxMjkzN2UiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.C_nOGKHXflfe7QOtcYVGdue7IB92BSPRHZ3PlvCbzIM'
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`,
     }
   };
   useEffect(() => {

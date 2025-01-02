@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import profile_icon from '../../assets/profile-icon-netflix.jpg'
-
+import {logout} from '../../firebase/firebase'
 
 function Navbar() {
     const navRef = useRef();
@@ -37,7 +37,7 @@ function Navbar() {
                 <div className="navbar-profile">
                     <img src={profile_icon} className="profile" alt="" />
                     <IoMdArrowDropdown className="arrow" />
-                    <div className="dropdown">Sighn out</div>
+                    <div onClick={()=>{logout()}} className="dropdown">Sighn out</div>
                 </div>
             </div>
 
