@@ -1,0 +1,22 @@
+/* toastStyles.css */
+.responsive-toast {
+    width: 200px; /* Default width for medium screens */
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .responsive-toast {
+        width: 250px; /* Smaller width for small screens */
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-toast {
+        width: 300px; /* Larger width for large screens */
+        font-size: 18px;
+        padding: 12px;
+    }
+}
