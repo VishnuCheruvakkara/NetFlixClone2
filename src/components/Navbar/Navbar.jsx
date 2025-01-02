@@ -37,7 +37,7 @@ function Navbar() {
                 <div className="navbar-profile">
                     <img src={profile_icon} className="profile" alt="" />
                     <IoMdArrowDropdown className="arrow" />
-                    <div onClick={()=>{logout()}} className="dropdown">Sighn out</div>
+                    <div onClick={()=>{logout()}} className="dropdown">Sign out</div>
                 </div>
             </div>
 

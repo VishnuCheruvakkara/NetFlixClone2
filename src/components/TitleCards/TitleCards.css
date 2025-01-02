@@ -3,8 +3,8 @@
     margin-top:50px;
     margin-bottom:30px;
 }
-.title-cards h3{
-    margin-bottom:8px;
+.titlecards h3{
+    margin-bottom:4px;
 }
 .card-list{
     display:flex;
@@ -30,4 +30,22 @@
     right:10px;
     text-decoration:none;
     color:#fff
+}
+
+@media (max-width:1024px){
+    .titlecards{
+        margin-top:10px;
+    }
+    .titlecards h3{
+        font-size:15px;
+        margin-bottom:1px;
+    }
+    .card-list{
+        margin-top: 8px;
+    }
+    .card-list img{
+        width:150px;
+       
+    }
+
 }

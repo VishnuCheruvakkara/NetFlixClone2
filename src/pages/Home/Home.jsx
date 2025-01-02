@@ -15,12 +15,14 @@ function Home() {
                 <img src={HeroBanner} alt="" className='banner-img' />
                 <div className="hero-caption">
                     <h2>Unlimited movies, TV shows and more</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae amet obcaecati nisi eaque consequatur nobis autem ipsa, culpa doloribus esse</p>
+                    <p>Unlimited entertainment at your fingertips. Watch anytime, anywhere with Netflix.</p>
                     <div className='hero-btns'>
                         <button className='btn'><FaPlay />Play</button>
                         <button className='btn dark-btn'><IoMdInformationCircleOutline className='info' />More Info</button>
                     </div>
-                    <TitleCards />
+                    <div className="title-cards" >
+                        <TitleCards/>
+                    </div>
                 </div>
             </div>
             <div className="more-cards">

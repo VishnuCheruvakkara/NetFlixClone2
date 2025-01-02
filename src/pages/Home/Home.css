@@ -13,7 +13,7 @@
     bottom:0;
 }
 .hero-caption h2{
-    margin-bottom:30px;
+    margin-bottom:3px;
     font-size: 3rem;
 }
 .hero-caption p{
@@ -24,7 +24,7 @@
 .hero-btns{
     display:flex;
     gap:10px;
-    margin-bottom:50px;
+    margin-bottom:25px;
 }
 
 .hero-btns .btn{
@@ -55,4 +55,23 @@
 }
 .more-cards{
     padding-left: 6%;
+}
+
+@media (max-width:1024px){
+    .title-cards{
+        display:none;
+    }
+    .hero-caption p{
+        font-size:10px;
+    }
+    .hero-caption h2{
+        font-size:18px;
+    }
+    .hero-caption .hero-btns .btn{
+        font-size: 11px;
+    }
+    .hero-caption .hero-btns .btn .info{
+        font-size: 15px;
+    }
+
 }
