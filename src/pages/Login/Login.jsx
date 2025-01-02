@@ -1,22 +1,42 @@
 import React, { useState } from 'react'
 import './Login.css'
-
+import {login,signup} from '../../firebase/firebase'
 
 function Login() {
-  const [signState,setSignState]=useState("Sign In")
+  const [signState, setSignState] = useState("Sign In")
+  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  const user_auth = async (event) => {
+    event.preventDefault();
+    try {
+      if (signState === "Sign In") {
+        await login(email, password);
+      } else {
+        await signup(name, email, password);
+      }
+    } catch (error) {
+      console.error("Authentication failed", error);
+    }
+  };
+  
+ 
   return (
     <div className='login'>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="logo-Netflix" />
       <div className="login-form">
         <h1>{ signState }</h1> 
         <form action="">
-          {signState === "Sign Up" ? <input type="text" placeholder="YourName"/>:<></>}
-          <input type="email" placeholder="Your Email" />
-          <input type="password" placeholder="Password" />
-          <button>{ signState }</button>
+          {signState === "Sign Up" ?
+          <input value={name} onChange={(event) => { setName(event.target.value)}} type="text" placeholder="YourName" /> : <></>}
+          <input value={email} onChange={(event) => { setEmail(event.target.value)}} type="email" placeholder="Your Email" />
+          <input value={password} onChange={(event)=>{setPassword(event.target.value)}} type="password" placeholder="Password" />
+          <button onClick={user_auth} type="submit" >{ signState }</button>
           <div className='form-help'>
             <div className='remember'>
-              <input type="checkbox" />
+              <input type="checkbox" id="rememberMe"/>
               <label htmlFor="">Remeber Me</label>
             </div>
             <p>Need Help?</p>

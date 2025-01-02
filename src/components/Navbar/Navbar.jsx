@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import './Navbar.css'
 import { FaSearch } from "react-icons/fa";
 import { FaRegBell } from "react-icons/fa";
@@ -7,8 +7,18 @@ import profile_icon from '../../assets/profile-icon-netflix.jpg'
 
 
 function Navbar() {
+    const navRef = useRef();
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 80) {
+                navRef.current.classList.add('nav-dark')
+            } else {
+                navRef.current.classList.remove('nav-dark')
+            }
+        })
+    },[])
     return (
-        <div className="navbar">
+        <div className="navbar" ref={navRef}>
             <div className="navbar-left">
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png' alt="" />
                 <ul>

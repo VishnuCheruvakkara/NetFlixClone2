@@ -28,4 +28,6 @@
     position: absolute;
     bottom:8px;
     right:10px;
+    text-decoration:none;
+    color:#fff
 }
